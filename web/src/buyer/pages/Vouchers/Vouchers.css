@@ -1,0 +1,211 @@
+.buyer-vouchers {
+    width: min(100% - 40px, 1040px);
+    margin: 32px auto;
+    display: grid;
+    gap: 16px;
+}
+
+.buyer-vouchers-page {
+    min-height: 60vh;
+}
+
+.buyer-vouchers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--white);
+}
+
+.buyer-vouchers-header h1,
+.buyer-voucher-details p {
+    margin: 5px 0;
+}
+
+.buyer-vouchers-eyebrow {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.buyer-vouchers-header p:last-child {
+    margin: 4px 0 0;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.buyer-vouchers-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 13px;
+    background: #fff0f2;
+    color: var(--deep-crimson);
+}
+
+.buyer-vouchers-state,
+.buyer-vouchers-empty {
+    padding: 32px 20px;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.buyer-vouchers-empty svg {
+    color: var(--deep-crimson);
+}
+
+.buyer-vouchers-empty h2 {
+    margin: 8px 0 4px;
+    color: var(--text-primary);
+}
+
+.buyer-vouchers-empty p {
+    margin: 0;
+}
+
+.buyer-vouchers-alert {
+    margin: 0;
+    padding: 11px 13px;
+    border: 1px solid #e9bdc5;
+    border-radius: 8px;
+    background: #fff6f7;
+    color: #8a1933;
+    font-size: 13px;
+}
+
+.buyer-voucher-list {
+    display: grid;
+    gap: 12px;
+}
+
+.buyer-voucher-card {
+    display: grid;
+    grid-template-columns: minmax(130px, 0.35fr) minmax(0, 1fr);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--white);
+}
+
+.buyer-voucher-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px;
+    border-right: 1px dashed var(--color-border);
+    background: #fff8f8;
+    color: var(--deep-crimson);
+}
+
+.buyer-voucher-value strong {
+    font-size: 18px;
+}
+
+.buyer-voucher-value span {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.buyer-voucher-details {
+    min-width: 0;
+    padding: 15px 18px;
+}
+
+.buyer-voucher-code-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.buyer-voucher-code-row code {
+    overflow-wrap: anywhere;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.buyer-voucher-code-row button,
+.buyer-voucher-shop-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 34px;
+    padding: 0 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--deep-crimson);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buyer-voucher-details p {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.buyer-voucher-details .buyer-voucher-status-reason {
+    color: var(--deep-crimson);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.buyer-voucher-details ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 9px 0;
+    padding-left: 17px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.status-expired .buyer-voucher-value,
+.status-ineligible .buyer-voucher-value,
+.status-used .buyer-voucher-value {
+    background: #f6f5f5;
+    color: var(--text-muted);
+}
+
+.buyer-voucher-code-row button:focus-visible,
+.buyer-voucher-shop-link:focus-visible {
+    outline: 3px solid rgba(178, 31, 58, 0.28);
+    outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+    .buyer-vouchers {
+        width: min(100% - 28px, 1040px);
+        margin-block: 20px;
+    }
+
+    .buyer-voucher-card {
+        grid-template-columns: 1fr;
+    }
+
+    .buyer-voucher-value {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border-right: 0;
+        border-bottom: 1px dashed var(--color-border);
+    }
+}

@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+.dockerignore
+vendor
+node_modules
+database/*.sqlite
+database/*.sqlite-*
+storage/logs/*
+storage/framework/cache/**
+storage/framework/sessions/**
+storage/framework/views/**
+storage/app/private/**
+storage/app/public/registration-documents/**
+bootstrap/cache/*.php

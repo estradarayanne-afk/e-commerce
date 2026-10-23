@@ -1,0 +1,81 @@
+/* Buyer styles migrated from shared stylesheet. */
+.buyer-global-shell {
+    min-height: 100vh;
+    width: 100%;
+    --buyer-content-width: 1280px;
+    --buyer-page-gutter: 24px;
+    background: var(--rose-cream, #fff7f8);
+    color: var(--wine);
+    font-family: var(--font-body, 'Segoe UI', Arial, sans-serif);
+}
+.buyer-global-main {
+    min-height: calc(100vh - 72px);
+}
+
+/* Shared buyer page frame. Keep these rules inside the buyer layout so admin,
+   seller, and courier workspaces retain their own spacing systems. */
+.buyer-global-shell .cryma-navbar-inner {
+    width: min(var(--buyer-content-width), calc(100% - 2 * var(--buyer-page-gutter)));
+}
+
+.buyer-global-shell .buyer-home-main,
+.buyer-global-shell .shop-page,
+.buyer-global-shell .orders-page,
+.buyer-global-shell .order-details-page,
+.buyer-global-shell .cart-page,
+.buyer-global-shell .checkout-page {
+    width: min(var(--buyer-content-width), calc(100% - 2 * var(--buyer-page-gutter)));
+    margin-inline: auto;
+}
+
+.buyer-global-shell .buyer-home-main {
+    max-width: var(--buyer-content-width);
+}
+
+.buyer-global-shell .product-details-container,
+.buyer-global-shell .buyer-chat-container,
+.buyer-global-shell .reviews-container {
+    width: min(var(--buyer-content-width), calc(100% - 2 * var(--buyer-page-gutter)));
+    margin-inline: auto;
+}
+
+.buyer-global-shell .account-container,
+.buyer-global-shell .wishlist-container {
+    width: min(var(--buyer-content-width), 100%);
+    margin-inline: auto;
+}
+
+.buyer-global-shell .buyer-footer {
+    width: 100%;
+}
+
+.buyer-global-shell :where(button, a, input, select, textarea):focus-visible {
+    outline: 3px solid var(--crimson, #b21f3a);
+    outline-offset: 3px;
+}
+
+.buyer-global-shell :where(.buyer-home, .shop-page, .orders-page, .order-details-page,
+    .cart-page, .checkout-page, .product-details-page, .buyer-chat-page,
+    .reviews-page, .account-page, .wishlist-page) {
+    color: var(--text-primary, #26151a);
+}
+
+@media (max-width: 900px) {
+    .buyer-global-shell {
+        --buyer-page-gutter: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .buyer-global-shell {
+        --buyer-page-gutter: 14px;
+    }
+
+    .buyer-global-shell .checkout-page {
+        padding-inline: 0;
+    }
+
+    .buyer-global-shell :where(.product-details-page, .buyer-chat-page, .reviews-page) {
+        padding-inline: 0;
+    }
+}
